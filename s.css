@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: #e5edff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.stopwatch {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-play {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 2rem;
+}.btn-rows{
+   margin-bottom: 8rem;
+}
+.her{
+   padding: 8rem 0;
+}
+#start-btn{
+ position: relative;
+    
+}.icon{
+    position: absolute;
+    top: 0.3rem;
+    left: 0.2rem;
+}#stop-btn{
+    position: relative;
+}.icon-1{
+    position: absolute;
+  top:0.5rem ;
+    left:0.3rem ;
+}
+.button-1{
+
+    display: flex;
+    justify-content: center;
+    background: #c7dbff;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+   border: none;
+   outline: none;
+   border:#c7dbff ;
+   border-radius: 50px;
+   cursor: pointer;
+}.button-1:active{
+    outline: none;
+    border: #a4bce9;
+    background: #a4bce9;
+}
+.button-1:hover{
+    background: #c7dbff;
+}
+.icon-x{
+    width: 12%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+  
+}.buttondark{
+    border-radius: 50px;
+    background: #c7dbff;
+    padding: 0.5rem 2rem;
+} 
+/* .buttondark:hover{
+
+
+}  */
+@media only  screen and (max-width: 910px) {
+    .her{
+        padding: 6rem 0;
+    }.btn-rows{
+        margin-bottom: 6rem;
+    }
+}
