@@ -1,98 +1,247 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-}
 
-.container {
-    background-color: #e5edff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.stopwatch {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-.btn-play {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    border-radius: 50px;
-    margin-top: 2rem;
-}.btn-rows{
-   margin-bottom: 8rem;
-}
-.her{
-   padding: 8rem 0;
-}
-#start-btn{
- position: relative;
+   body {
+    font-family: Arial, sans-serif;
     
-}.icon{
-    position: absolute;
-    top: 0.3rem;
-    left: 0.2rem;
-}#stop-btn{
-    position: relative;
-}.icon-1{
-    position: absolute;
-  top:0.5rem ;
-    left:0.3rem ;
+    
+    height: 100vh;
+    margin: 0;
 }
-.button-1{
 
-    display: flex;
-    justify-content: center;
-    background: #c7dbff;
+
+.main_interface{
+    background-color:#e5edff ;
+    padding: 4rem o;
+}
+.toggle-btn-1 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Active State */
+.toggle-btn-1.active {
+    background:#a3c5ff;
+    color: rgb(21, 78, 151);
+    font-weight: bold;
+}
+
+.text-n-this{
+    max-width: 450px;
+   min-height:350px ;
+   padding: 4rem 0;
+   margin: 6rem auto;
+
+}
+.play-button {
     width: 100%;
-    padding: 1.5rem 2rem;
-    font-size: 1rem;
-   border: none;
-   outline: none;
-   border:#c7dbff ;
-   border-radius: 50px;
-   cursor: pointer;
-}.button-1:active{
-    outline: none;
-    border: #a4bce9;
-    background: #a4bce9;
-}
-.button-1:hover{
-    background: #c7dbff;
-}
-.icon-x{
-    width: 12%;
-    text-align: center;
+   
+    height: 50px;
+    background-color: #0d6efd; /* Bootstrap Primary Blue */
+    border: none;
+    border-radius: 25px;
     display: flex;
+    align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
 
+/* Hover Effect */
+.play-button:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+/* Play Icon */
+.play-button i {
+    font-size: 18px;
+    color: white;
+}
+
+.when_CLick_on_start_button{
+   
+}
+.btn-blue{
+    width: 100px;
+    height: 40px;
+    background-color: #c7dbff;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.6rem 0;
+}.btn-blue.focus{
+    background-color: #0056b3;
+    background:#a3c5ff;
+    color: rgb(21, 78, 151);
+    font-weight: bold;
+}.circle-container-1{
+    margin: 3rem auto;
+    max-width: 360px;
+    max-height: 460px;
+    min-height: 360px;
   
-}.buttondark{
-    border-radius: 50px;
-    background: #c7dbff;
-    padding: 0.5rem 2rem;
-} 
-/* .buttondark:hover{
+    border: 0.6rem solid  #a3c5ff ;
+    border-radius: 50%;
+   
+    position: relative;
+
+}.circle-container> h1{
+    font-size: 3rem;
+    font-weight:bolder;
+  position: absolute;
+    right: 125px;
+    top: 130px;
+}
+.circle-1{
+    width: 18px ;
+    height: 18px;
+    background: 
+#0b57d0
+;
+    border: 3px solid #0b57d0;
+    border-radius: 50%;
+    position: absolute;
+    top: 5.7rem;
+}
 
 
-}  */
+
+
+
+
+
+
+
+
+.after_CLick_on_stop_button{
+    background-color: #fef5da;
+ 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.toggle-container {
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+}
+
+/* Buttons */
+.toggle-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Active State */
+.toggle-btn.active {
+    background: #f4c766;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Hover Effect */
+.toggle-btn:hover {
+    background: #f8d57e;
+}
+
+/* Icons */
+.icon {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin: 0 2rem;
+}
+
+.icon:hover {
+    color: #000;
+}
+.circle-container{
+    margin: 3rem auto;
+    max-width: 360px;
+    max-height: 460px;
+    min-height: 360px;
+  
+    border: 0.6rem solid #f5e4b8;
+    border-radius: 50%;
+   
+    position: relative;
+    top: 7rem;
+
+}.circle-container >.text-container{
+    font-size: 3rem;
+    font-weight:bolder;
+
+
+}
+.text-container>.ek-or-container{
+margin-top: 8rem;
+}
+
+.circle{
+    width: 18px ;
+    height: 18px;
+    background: rgba(15, 8, 8, 0.836);
+    border: 3px solid  rgba(165, 42, 42, 0.068);
+    border-radius: 50%;
+    position: absolute;
+    top: 5.7rem;
+ 
+
+}
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Common Button Styles */
+.btn {
+    width: 100px;
+    height: 40px;
+    background-color: #f4c766;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.6rem 0;
+}
+
+/* Hover Effect */
+.btn:hover {
+    background-color: #f8d57e;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Button Icons */
+.btn i {
+    font-size: 20px;
+    
+    color: #333;
+}
 @media only  screen and (max-width: 910px) {
-    .her{
-        padding: 6rem 0;
-    }.btn-rows{
-        margin-bottom: 6rem;
-    }
+   
 }

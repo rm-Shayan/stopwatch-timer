@@ -1,34 +1,95 @@
-
-    <div class="container mt-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#" id="timer-tab" data-toggle="tab" aria-controls="timer" aria-selected="true">Timer</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#" id="stopwatch-tab" data-toggle="tab" aria-controls="stopwatch" aria-selected="false">Stopwatch</a>
-                            </li>
-                        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="s.css">
+</head>
+<body>
+    <div class="container main_interface " id="BOFStopwatch">
+       
+        <div class="row toggle-container">
+            <div class="col-12">
+            
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-start">
+                  <a href="checker.html" style="text-decoration: none;">          <button class="toggle-btn-1" id="timerBtn">⏳ Timer</button></a>
+                  <a href="#"><button class="toggle-btn-1 active" id="stopwatchBtn">✔ Stopwatch</button></a>  
+                
+                </div>
+                <div class="col-9 d-flex justify-content-end ">
+                    <span class="icon d-none d-sm-none d-md-block d-lg-block">🔇</span>
+                    <span class="icon d-none d-sm-none d-md-block d-lg-block">⤢</span>
+                </div>
                     </div>
-                    <div class="card-body">
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="timer" role="tabpanel" aria-labelledby="timer-tab">
-                                <div class="text-center">
-                                    <h2 class="timer-display">00:00:00</h2> 
-                                </div>
-                                <body class="row mt-4">
-                                    <div class="col-md-6">
-                                        <button class="btn btn-primary btn-block timer-start">Start</button>
-                                    </div>
-                                </body>
+                
+        
                
-                            </div>
+            </div>
+        </div>    
 
 
 
 
 
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+
+
+
+
+    </div>
+    <div class="container mt-5 after_CLick_on_stop_button"  style="display: none;">
+     
+        <div class="row toggle-container">
+            <div class="col-12">
+            
+                    <div class="row">
+                        <div class="col-3 d-flex justify-content-start">
+                  <a href="checker.html" style="text-decoration: none;">          <button class="toggle-btn" id="timerBtn">⏳ Timer</button></a>
+                  <a href="#"><button class="toggle-btn active" id="stopwatchBtn">✔ Stopwatch</button></a>  
+                
+                </div>
+                <div class="col-9 d-flex justify-content-end ">
+                    <span class="icon d-none d-sm-none d-md-block d-lg-block">🔇</span>
+                    <span class="icon d-none d-sm-none d-md-block d-lg-block">⤢</span>
+                </div>
+                    </div>
+                
+        
+               
+            </div>
+        </div>
+        <div class="row container  ">
+            <div class="col-12 circle-ki-progress ">
+                <div class="circle-container">
+                  <h1 id="textInsideCircle">14:00 </h1>
+                  <div class="circle">
+
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">  <div class="col-12">
+            <div class="button-container">
+                <!-- Play Button -->
+                <button class="btn w-50">
+                    <i class="fas fa-play"></i>
+                </button>
+        
+                <!-- Reset Button -->
+                <button class="btn w-50">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+            </div>
+        </div></div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="stopwatch.js"></script>
+    </body>
+    </html>
