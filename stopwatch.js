@@ -67,18 +67,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    let input=document.getElementById("inputOfNumber").value;
+    let input=document.getElementById("inputOfNumber");
     let btn1=document.getElementById("data1");
     let btn2=document.getElementById("data2");
     let btn3=document.getElementById("data3")
     
     
-    function addValueToInput(event) {
-        let valueSpan = event.target.querySelector("span span:nth-child(2)");  // ✅ Select correct span
-        if (valueSpan) {
-            input.value = valueSpan.innerText;  // ✅ Set the input field value
-        }
-    }
+  function addValueToInput(event) {
+    
+    console.log(event.target.childNodes[0].childNodes[1])
+    input.value=event.target.childNodes[0].childNodes[1].innerText
+ 
+  
+
+}
     
     btn1.addEventListener("click", addValueToInput);
     btn2.addEventListener("click", addValueToInput);
