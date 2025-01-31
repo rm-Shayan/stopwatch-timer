@@ -124,6 +124,7 @@
 
 .after_CLick_on_stop_button{
     background-color: #fef5da;
+   
  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -175,11 +176,12 @@
     color: #000;
 }
 .circle-container{
-    margin: 3rem auto;
+    margin: 0 auto;
+    margin-top: -4rem;
     max-width: 360px;
     max-height: 460px;
     min-height: 360px;
-  
+ 
     border: 0.6rem solid #f5e4b8;
     border-radius: 50%;
    
@@ -194,6 +196,7 @@
 }
 .text-container>.ek-or-container{
 margin-top: 8rem;
+
 }
 
 .circle{
@@ -210,6 +213,7 @@ margin-top: 8rem;
 .button-container {
     display: flex;
     gap: 15px;
+    
 }
 
 /* Common Button Styles */
@@ -226,6 +230,7 @@ margin-top: 8rem;
     transition: background 0.3s ease;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1.6rem 0;
+    margin-top: 12rem;
 }
 
 /* Hover Effect */
@@ -241,6 +246,36 @@ margin-top: 8rem;
     font-size: 20px;
     
     color: #333;
+
+}
+
+
+
+
+
+
+
+/* //timer ui */
+.not-active{
+    padding: 0 1.4rem;
+    position: relative ;
+    left: 0.9rem;
+}
+.not-active>img{
+    position: absolute ;
+    left: -0rem;
+    top: 0.4rem;
+}
+
+input{
+    background:transparent;
+    outline: none;
+   width: 145px;
+   font-size: 3.4rem;
+   border: none;
+}
+.container_of_buttons-of-time{
+    margin-top: -11rem;
 }
 @media only  screen and (max-width: 910px) {
    
