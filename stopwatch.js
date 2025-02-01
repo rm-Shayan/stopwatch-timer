@@ -70,13 +70,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let input=document.getElementById("inputOfNumber");
     let btn1=document.getElementById("data1");
     let btn2=document.getElementById("data2");
-    let btn3=document.getElementById("data3")
-    
+    let btn3=document.getElementById("data3");
+    let btnStartTimer=document.getElementById("playButtonOftimer");
+
     
   function addValueToInput(event) {
     
-    console.log(event.target.childNodes[0].childNodes[1])
-    input.value=event.target.childNodes[0].childNodes[1].innerText
+   if(event.target.id=="data1"){
+input.value="00:30"
+   }else if(event.target.id=="data2"){
+    input.value="1:00" 
+   }else if(event.target.id=="data3"){
+    input.value="5:00"
+   }
  
   
 
