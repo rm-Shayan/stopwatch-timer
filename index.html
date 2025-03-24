@@ -110,8 +110,8 @@
             
                     <div class="row">
                         <div class="col-3 d-flex justify-content-start">
-                  <a href="checker.html" style="text-decoration: none;">          <button class="toggle-btn" id="timerBtn">⏳ Timer</button></a>
-                  <a href="#"><button class="toggle-btn active" id="stopwatchBtn">✔ Stopwatch</button></a>  
+                         <button class="toggle-btn" id="timerBtn3">⏳ Timer</button></a>
+                  <button class="toggle-btn active" id="stopwatchBtn">✔ Stopwatch</button></a>  
                 
                 </div>
                 <div class="col-9 d-flex justify-content-end ">
@@ -174,7 +174,8 @@
 
     <div class="row">
         <div class="col-12 d-flex justify-content-center align-items-center  text-n-this">
-            <h1 id="timeInSecond"> <input type="text" class="input" id="inputOfNumber" value=" 00:00:00"></h1> 
+            <h5 id="timeInSecond"> <input id="input" type="text" class="inputOfNumber" placeholder="HH:MM:SS"></h5> 
+            
         </div>
 
        
@@ -196,11 +197,23 @@
         </div>
         <div class="col-12">
             <button class="play-button w-100" 
-            id="playButtonOftimer">
+            id="btnStartTimer">
+
+
+                <i class="fas fa-play"></i>
+
+            </button>
+            
+            <button class=" play-button-1 w-100 " 
+            id="btnPauseTimer" style="display: none;">
+
+
                 <i class="fas fa-play"></i>
             </button>
         </div>
+       
     </div>
+
         </div>    
 
 

@@ -18,13 +18,19 @@ document.addEventListener("DOMContentLoaded", function () {
  
 
  
-
+let stopWatchInTimer=document.getElementById("stopwatch");
+stopWatchInTimer.addEventListener("click",()=>{
+    timerUi.style.display="none";
+    mainUI.style.display="block"
+})
 
 
 
 
 
     let timerBtn = document.getElementById("timerBtn1");
+    let timerBtn2=document.getElementById("timerBtn2")
+    let timerBtn3=document.getElementById("timerBtn3")
     let stopWatchBtn = document.getElementById("stopwatchBtn1");
     let stopWatchBtn2 = document.getElementById("stopwatch");
     
@@ -33,6 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
         timerBtn.classList.remove("active");
         stopWatchBtn.classList.remove("active");
         stopWatchBtn2.classList.remove("active");
+        timerBtn2.classList.remove("active");
+        timerBtn3.classList.remove("active");
     
     
         event.target.classList.add("active");
@@ -58,21 +66,37 @@ document.addEventListener("DOMContentLoaded", function () {
             mainUI.style.display = "block";
             timerUi.style.display = "none";
             nextUi.style.display = "none";
+        }else if(event.target.id=="timerBtn2"){
+            console.log("Timer UI activated");
+    
+            timersUi.style.display = "block";
+            mainUI.style.display = "none";
+            timerUi.style.display = "none";
+            nextUi.style.display = "none";
+        }else if(event.target.id=="timerBtn3"){
+            console.log("Timer UI activated");
+    
+            timersUi.style.display = "block";
+            mainUI.style.display = "none";
+            timerUi.style.display = "none";
+            nextUi.style.display = "none";
         }
     }
     
     timerBtn.addEventListener("click", activate);
+    timerBtn2.addEventListener("click", activate);
+    timerBtn3.addEventListener("click", activate);
     stopWatchBtn.addEventListener("click", activate);
     stopWatchBtn2.addEventListener("click", activate);  
 
 
 
-    let input=document.getElementById("inputOfNumber");
+    let input=document.getElementById("input");
     let btn1=document.getElementById("data1");
     let btn2=document.getElementById("data2");
     let btn3=document.getElementById("data3");
-    let btnStartTimer=document.getElementById("playButtonOftimer");
-
+    let btnStartTimer=document.getElementById("btnStartTimer");
+     let btnPauseTimer=document.getElementById("btnPauseTimer")
     
   function addValueToInput(event) {
     
@@ -91,8 +115,99 @@ input.value="00:30"
     btn1.addEventListener("click", addValueToInput);
     btn2.addEventListener("click", addValueToInput);
     btn3.addEventListener("click", addValueToInput);
+
     
 
+
+
+
+
+    let interval ;
+
+btnPauseTimer.addEventListener("click",()=>{
+    btnStartTimer.style.display="block";
+        btnPauseTimer.style.display="none";
+        clearInterval( interval );
+})
+
+    btnStartTimer.addEventListener("click", () => {
+        
+        btnStartTimer.style.display="none";
+        btnPauseTimer.style.display="block";
+        
+        if (!input.value || !input.value.includes(":")) {
+            return alert("Enter time in format HH:MM:SS");
+        }
+
+        let time = input.value.trim().split(":");
+
+        if (time.length !== 3) {
+            return alert("Invalid format! Use HH:MM:SS");
+        }
+
+        let hours = parseInt(time[0]) || 0;
+        let minutes = parseInt(time[1]) || 0;
+        let sec = parseInt(time[2]) || 0;
+
+        if (isNaN(hours) || isNaN(minutes) || isNaN(sec)) {
+            return alert("Invalid numbers! Use HH:MM:SS");
+        }
+
+        input.disabled = true; // Disable input when timer starts
+
+        function updateDisplay() {
+            let formattedTime =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+            
+            input.value = formattedTime; // Update input value dynamically
+            // timerDisplay.innerText = formattedTime; // Show on screen
+        }
+
+        updateDisplay(); // Initial Display
+
+         interval = setInterval(() => {
+            if (hours === 0 && minutes === 0 && sec === 0) {
+                clearInterval(interval);
+                alert("Timer Finished!");
+                input.disabled = false; // Enable input again
+                btnStartTimer.style.display="block";
+                btnPauseTimer.style.display="none";
+                
+                return;
+            }
+
+            if (sec === 0) {
+                if (minutes > 0) {
+                    sec = 59;
+                    minutes--;
+                } else if (hours > 0) {
+                    minutes = 59;
+                    sec = 59;
+                    hours--;
+                }
+            } else {
+                sec--;
+            }
+
+            updateDisplay();
+        }, 1000);
+    });
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   if (!mainUI || !timerUi || !startBtn || !timeInSec2 || !stopBtn || !resetBtn || !nextUi) {
       console.error("❌ One or more elements not found. Check your HTML IDs.");
       return;

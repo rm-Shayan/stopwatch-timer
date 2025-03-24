@@ -30,11 +30,14 @@
 }
 
 .text-n-this{
-    max-width: 450px;
+    max-width: 500px;
    min-height:350px ;
-   padding: 4rem 0;
+   padding: 4rem 2rem;
    margin: 6rem auto;
 
+} .inputOfNumber{
+   
+    font-size: 2.1rem;
 }
 .play-button {
     width: 100%;
@@ -61,10 +64,33 @@
     font-size: 18px;
     color: white;
 }
-
-.when_CLick_on_start_button{
+.play-button-1 {
+    width: 100%;
    
+    height: 50px;
+    background-color: #008cff; /* Bootstrap Primary Blue */
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+/* Hover Effect */
+.play-button-1:hover {
+    background-color: #2da1ff; /* Darker Blue */
+}
+
+/* Play Icon */
+.play-button-1 i {
+    font-size: 18px;
+    color: white;
+}
+
+
 .btn-blue{
     width: 100px;
     height: 40px;
